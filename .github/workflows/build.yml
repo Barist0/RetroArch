@@ -1,0 +1,24 @@
+name: Build RetroArch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Build
+      run: msbuild pkg/msvc/RetroArch-msvc2022.sln /p:Configuration=Release /p:Platform=x64
+
+    - name: Upload Build
+      uses: actions/upload-artifact@v4
+      with:
+        name: retroarch-build
+        path: pkg/msvc/msvc-2022/x64/Release/retroarch.exe
