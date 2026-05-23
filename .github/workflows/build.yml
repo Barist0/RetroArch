@@ -21,4 +21,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: retroarch-build
-        path: pkg/msvc/msvc-2022/x64/Release/retroarch.exe
+        path: pkg/msvc/msvc-2022/x64/Release/RetroArch-msvc2022.exe
