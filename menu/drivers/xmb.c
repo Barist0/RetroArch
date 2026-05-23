@@ -6034,8 +6034,8 @@ static void xmb_show_fullscreen_thumbnails(
 
    /* Enable fullscreen thumbnails */
    xmb->fullscreen_thumbnail_selection = selection;
-   xmb->show_fullscreen_thumbnails     = true;
-   xmb->want_fullscreen_thumbnails     = true;
+   xmb->show_fullscreen_thumbnails     = false;
+   xmb->want_fullscreen_thumbnails     = false;
    xmb_set_thumbnail_delay(false);
 }
 
